@@ -16,6 +16,26 @@ export type ColumnConfig = {
   label: string;
   sortable: boolean;
   filterable: boolean;
+  editable: boolean;
   visible: boolean;
   width?: number;
+  validation?: (value: any) => boolean;
 };
+
+export interface TableSettings {
+  columnVisibility: Record<string, boolean>;
+  columnOrder: string[];
+  pageSize: number;
+  sorting: SortingRule[];
+}
+
+export interface SortingRule {
+  id: string;
+  desc: boolean;
+}
+
+export interface BulkAction {
+  id: string;
+  label: string;
+  handler: (selectedIds: string[]) => void;
+}

@@ -1,13 +1,15 @@
 import { Student } from '../types';
 
 export const generateStudents = (count: number = 50): Student[] => {
-  const majors = ['Computer Science', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Economics', 'History'];
+  const majors = ['Computer Science', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Economics', 'History', 'Psychology'];
   const statuses = ['active', 'graduated', 'suspended'] as const;
+  const firstNames = ['Alex', 'Jamie', 'Taylor', 'Morgan', 'Casey', 'Riley', 'Jordan', 'Quinn'];
+  const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis'];
   
   return Array.from({ length: count }, (_, index) => ({
     id: `STU${String(index + 1).padStart(3, '0')}`,
-    name: `Student ${index + 1}`,
-    age: Math.floor(Math.random() * 10) + 18,
+    name: `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`,
+    age: Math.floor(Math.random() * 15) + 18,
     grade: Math.floor(Math.random() * 40) + 60,
     email: `student${index + 1}@university.edu`,
     phone: `+1 (555) ${String(Math.floor(Math.random() * 1000)).padStart(3, '0')}-${String(Math.floor(Math.random() * 10000)).padStart(4, '0')}`,

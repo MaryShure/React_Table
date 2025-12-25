@@ -1,36 +1,60 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 20px;
 }
 
 .App-header {
   background: white;
-  margin: 20px auto;
+  margin: 0 auto 30px;
   padding: 30px;
   max-width: 1200px;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .App-header h1 {
-  margin: 0 0 10px 0;
-  color: #333;
+  margin: 0 0 15px 0;
+  color: #2c3e50;
   font-size: 2.5em;
   font-weight: 700;
 }
 
 .App-header p {
-  margin: 0;
+  margin: 0 0 20px 0;
   color: #666;
   font-size: 1.1em;
   line-height: 1.6;
 }
 
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.features-list span {
+  background: #e3f2fd;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #1976d2;
+  font-weight: 500;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.App-footer {
+  margin-top: 30px;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9em;
 }
 
 /* Анимации */
